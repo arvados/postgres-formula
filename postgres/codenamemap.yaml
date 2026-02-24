@@ -17,7 +17,7 @@
     {% set version = repo.version %}
     {% set fromrepo = repo.fromrepo|default(name ~ '-pgdg', true) %}
   {% else %}
-    {% set fromrepo = name %}
+    {% set fromrepo = '' %}
   {% endif %}
   {% set cluster_name = repo.cluster_name %}
   {% set conf_dir = '/etc/postgresql/{0}/{1}'.format(version, cluster_name) %}
